@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  height: 400px;
+  margin: 30px auto;
+  background-color: red;
+  border: 3px solid black;
+  border-radius: 20px;
+  position: relative;
+}
+
+.container h1 {
+  text-align: right;
+  text-transform: uppercase;
+  margin-right: 15%;
+}
+
+.container .immagine img {
+  width: 35%;
+}
+
+.container .dati {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 80%;
+  top: 60%;
+  transform: translate(-80%, -60%);
+  background-color: rgb(212, 212, 53);
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.container .dati #intestatario{
+  line-height: 120px;
+}
