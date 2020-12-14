@@ -33,6 +33,8 @@ kilometriDaPercorrere = parseInt(prompt('Quanti km devi percorrere?'));
 eta = parseInt(prompt('Quanti anni hai?'));
 prezzoBiglietto = kilometriDaPercorrere * 0.21;
 
+// arrotondo prezzo biglietto
+var prezzoBigliettoArrotondato = prezzoBiglietto.toFixed(2);
 
 // dichiaro delle variabili per applicare lo sconto
 var sconto20;
@@ -41,13 +43,13 @@ var sconto20Applicato;
 var sconto40Applicato;
 
 // assegno un valore
-sconto20 = (prezzoBiglietto * 20) / 100;
-sconto40 = (prezzoBiglietto * 40) / 100;
-sconto20Applicato = prezzoBiglietto - sconto20;
-sconto40Applicato = prezzoBiglietto - sconto40;
+sconto20 = (prezzoBigliettoArrotondato * 20) / 100;
+sconto40 = (prezzoBigliettoArrotondato * 40) / 100;
+sconto20Applicato = prezzoBigliettoArrotondato - sconto20;
+sconto40Applicato = prezzoBigliettoArrotondato - sconto40;
 
 // istruzioni condizionali e stampo in html sia l'intestatario sia il prezzo del biglietto effettivo
-var spesaFinale = prezzoBiglietto;
+var spesaFinale = prezzoBigliettoArrotondato;
 
 if (eta <= 17) {
   spesaFinale = sconto20Applicato;
