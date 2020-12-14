@@ -13,20 +13,25 @@ var prezzoBiglietto;
 // assegno un valore alle variabili
 nome = prompt('Inserisci il tuo nome');
 cognome = prompt('cognome');
-kilometriDaPercorrere = parseInt(prompt('Quanti km devi percorrere?'));
-eta = parseInt(prompt('Quanti anni hai?'));
-prezzoBiglietto = kilometriDaPercorrere * 0.21;
 
 // verifico che le lettere iniziali del nome e del cognome sono maiuscolo e il resto minuscolo e senza spazi
 var nomeMinuscoloAttaccato;
 var nomeLetteraMaiuscola;
 var cognomeMinuscoloAttaccato;
 var cognomeLetteraMaiuscola;
+var nomeCompleto;
+var cognomeCompleto;
 
-nomeMinuscoloAttaccato = nome.toLowerCase().trim();
-cognomeMinuscoloAttaccato = nome.toLowerCase().trim();
-nomeLetteraMaiuscola = nomeMinuscoloAttaccato.charAt(0).toUpperCase();
-cognomeLetteraMaiuscola = cognomeMinuscoloAttaccato.charAt(0).toUpperCase();
+nomeMinuscoloAttaccato = nome.substr(1).toLowerCase().trim();
+cognomeMinuscoloAttaccato = cognome.substr(1).toLowerCase().trim();
+nomeLetteraMaiuscola = nome.charAt(0).toUpperCase();
+cognomeLetteraMaiuscola = cognome.charAt(0).toUpperCase();
+nomeCompleto = nomeLetteraMaiuscola + nomeMinuscoloAttaccato;
+cognomeCompleto = cognomeLetteraMaiuscola + cognomeMinuscoloAttaccato;
+
+kilometriDaPercorrere = parseInt(prompt('Quanti km devi percorrere?'));
+eta = parseInt(prompt('Quanti anni hai?'));
+prezzoBiglietto = kilometriDaPercorrere * 0.21;
 
 
 // dichiaro delle variabili per applicare lo sconto
@@ -50,4 +55,6 @@ if (eta <= 17) {
   spesaFinale = sconto40Applicato;
 }
 
+
+document.getElementById('intestatario').innerHTML += nomeCompleto + ' ' + cognomeCompleto; 
 document.getElementById('costo').innerHTML += spesaFinale + '€';

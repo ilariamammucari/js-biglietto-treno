@@ -17,7 +17,7 @@
 .container h1 {
   text-align: right;
   text-transform: uppercase;
-  margin-right: 15%;
+  margin-right: 12%;
 }
 
 .container .immagine img {
@@ -25,12 +25,12 @@
 }
 
 .container .dati {
-  width: 400px;
+  width: 500px;
   height: 200px;
   position: absolute;
-  left: 80%;
+  left: 90%;
   top: 60%;
-  transform: translate(-80%, -60%);
+  transform: translate(-90%, -60%);
   background-color: rgb(212, 212, 53);
   border: 2px solid black;
   border-radius: 20px;
